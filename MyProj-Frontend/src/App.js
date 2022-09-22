@@ -15,7 +15,7 @@ function App() {
         }).catch((error) => {
           setData({ error: error })
         })
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [api_host])
 
