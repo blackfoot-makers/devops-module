@@ -1,0 +1,7 @@
+version: "3.0"
+services:
+  web:
+    build:
+      dockerfile: master.Dockerfile
+    ports:
+      - "80:80"
