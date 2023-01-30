@@ -13,6 +13,7 @@ export const connect = () => {
   const uri = `mongodb://${username}:${password}@${host}:${port}/${dbname}?authSource=admin`; if (database) {
     return;
   }
+  console.log(uri);
   Mongoose.connect(uri, {
     useNewUrlParser: true,
     useFindAndModify: true,

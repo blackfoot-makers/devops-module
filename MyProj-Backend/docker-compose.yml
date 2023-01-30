@@ -1,25 +1,20 @@
 version: "3.8"
 services:
-  back:
-    depends_on:
-      - mongo
-    restart: always
-    build:
-      dockerfile: master.Dockerfile
-    ports:
-      - 8080:8080
-    environment:
-      MONGO_USERNAME: admin
-      MONGO_PASSWORD: password
-      MONGO_DATABASE: kitty
-  mongo:
-    image: mongo:latest
+  # back:
+  #   depends_on:
+  #     - mongo
+  #   build:
+  #     dockerfile: dev.Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     MONGO_USERNAME: admi
+  #     MONGO_PASSWORD: password
+  #     MONGO_DATABASE: kitty
+  mongodb:
+    image: "mongo:latest"
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
     ports:
-      - 27017:27017
-    volumes:
-      - mongodb:/data/db
-volumes:
-  mongodb:
+      - "27017:27017"
