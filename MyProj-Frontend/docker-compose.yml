@@ -2,6 +2,6 @@ version: "3.0"
 services:
   web:
     build:
-      dockerfile: master.Dockerfile
+      dockerfile: ${CI_COMMIT_REF_NAME:-dev}.Dockerfile
     ports:
       - "80:80"

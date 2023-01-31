@@ -45,3 +45,31 @@ We copy the project file to the image and launch the node server
 we also extend this docker-compose with [docker-compose.local.yml](MyProj-Backend/docker-compose.local.yml) and [docker-compose.prod.yml](MyProj-Backend/docker-compose.prod.yml) they give aditional arguments to our deployements.</br>
 `.prod` adds the labels to our service so it can be deployed by a orchestrator and is registered by traefik
 `.local` build localy the image and adds the ports of mongo and Redis making debug easier
+
+
+
+Project description: The goal of the project is to set up a “real world” project, showcasing what we saw during the lecture and workshops.
+You'll also demonstrate how Developers interact with your project, and how your infrastructure accommodates them.
+
+You should have :
+- A Project fully wrapped with Docker
+- Different environment for Dev and Production
+- A CI testing and Building the application
+- Caching and Usage of S3 to scale your application
+
+The results will be : 
+A strong application
+- Tested all along the development
+- Version and History of you project with the docker images
+- Builded and release when you commit new code
+- Planned to be scaled with caching and storage services built-in to your application.
+
+Mandatory Rules
+- You must be able to explain everything that went into your project
+- All of the custom images should be yours
+- Your project should be pushed on a Git repository, and accessible by the two teachers 
+- You project should be ready and pushed on the repository at least 3 days before the project review
+- You project needs to meet the requirements and rules described in the course (Google slides)
+- When we try to start your project, it should work on the first try and with one command, no debugging or pre-setup will be done during the review.
+
+
