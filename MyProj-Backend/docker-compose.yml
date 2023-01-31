@@ -4,7 +4,7 @@ services:
     depends_on:
       - mongodb
     build:
-      dockerfile: master.Dockerfile
+      dockerfile: ${CI_COMMIT_REF_NAME:-dev}.Dockerfile
     ports:
       - "${CI_HOST}:8080"
   mongodb:
