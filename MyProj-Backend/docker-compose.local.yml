@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  back:
+    environment:
+      - MONGO_USERNAME=admin
+      - MONGO_PASSWORD=password
+      - MONGO_DATABASE=kitten
+  mongodb:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
